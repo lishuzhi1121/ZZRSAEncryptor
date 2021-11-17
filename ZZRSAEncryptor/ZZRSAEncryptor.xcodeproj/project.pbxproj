@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B1AEE8DA2744FCE1001B07EE /* ZZRSAEncryptor_Package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B1AEE8DB2744FCE1001B07EE /* Build configuration list for PBXAggregateTarget "ZZRSAEncryptor_Package" */;
+			buildPhases = (
+				B1AEE8DE2744FCE6001B07EE /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = ZZRSAEncryptor_Package;
+			productName = ZZRSAEncryptor_Package;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		B1AEE8CB2744FC45001B07EE /* ZZRSAEncryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEE8C22744FC45001B07EE /* ZZRSAEncryptor.framework */; };
+		B1AEE8D02744FC45001B07EE /* ZZRSAEncryptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8CF2744FC45001B07EE /* ZZRSAEncryptorTests.m */; };
+		B1AEE8D12744FC45001B07EE /* ZZRSAEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8C52744FC45001B07EE /* ZZRSAEncryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AEE8F02744FD9C001B07EE /* ZZRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8EF2744FD9C001B07EE /* ZZRSAEncryptor.m */; };
+		B1AEE8F42744FE43001B07EE /* ZZBigInt.mm in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8F22744FE43001B07EE /* ZZBigInt.mm */; };
+		B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F32744FE43001B07EE /* ZZBigInt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AEE8F8274500DC001B07EE /* ZZRSAKey.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AEE8F9274500DC001B07EE /* ZZRSAKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1AEE8CC2744FC45001B07EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1AEE8B92744FC45001B07EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1AEE8C12744FC45001B07EE;
+			remoteInfo = ZZRSAEncryptor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B1AEE8C22744FC45001B07EE /* ZZRSAEncryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZZRSAEncryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AEE8C52744FC45001B07EE /* ZZRSAEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZRSAEncryptor.h; sourceTree = "<group>"; };
+		B1AEE8CA2744FC45001B07EE /* ZZRSAEncryptorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZRSAEncryptorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AEE8CF2744FC45001B07EE /* ZZRSAEncryptorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZRSAEncryptorTests.m; sourceTree = "<group>"; };
+		B1AEE8EF2744FD9C001B07EE /* ZZRSAEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZRSAEncryptor.m; sourceTree = "<group>"; };
+		B1AEE8F22744FE43001B07EE /* ZZBigInt.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZZBigInt.mm; sourceTree = "<group>"; };
+		B1AEE8F32744FE43001B07EE /* ZZBigInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZBigInt.h; sourceTree = "<group>"; };
+		B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZRSAKey.h; sourceTree = "<group>"; };
+		B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZRSAKey.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1AEE8BF2744FC45001B07EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AEE8C72744FC45001B07EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AEE8CB2744FC45001B07EE /* ZZRSAEncryptor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1AEE8B82744FC45001B07EE = {
+			isa = PBXGroup;
+			children = (
+				B1AEE8C42744FC45001B07EE /* ZZRSAEncryptor */,
+				B1AEE8CE2744FC45001B07EE /* ZZRSAEncryptorTests */,
+				B1AEE8C32744FC45001B07EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1AEE8C32744FC45001B07EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1AEE8C22744FC45001B07EE /* ZZRSAEncryptor.framework */,
+				B1AEE8CA2744FC45001B07EE /* ZZRSAEncryptorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1AEE8C42744FC45001B07EE /* ZZRSAEncryptor */ = {
+			isa = PBXGroup;
+			children = (
+				B1AEE8C52744FC45001B07EE /* ZZRSAEncryptor.h */,
+				B1AEE8EF2744FD9C001B07EE /* ZZRSAEncryptor.m */,
+				B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */,
+				B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */,
+				B1AEE8F12744FE43001B07EE /* BigInt */,
+			);
+			path = ZZRSAEncryptor;
+			sourceTree = "<group>";
+		};
+		B1AEE8CE2744FC45001B07EE /* ZZRSAEncryptorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1AEE8CF2744FC45001B07EE /* ZZRSAEncryptorTests.m */,
+			);
+			path = ZZRSAEncryptorTests;
+			sourceTree = "<group>";
+		};
+		B1AEE8F12744FE43001B07EE /* BigInt */ = {
+			isa = PBXGroup;
+			children = (
+				B1AEE8F32744FE43001B07EE /* ZZBigInt.h */,
+				B1AEE8F22744FE43001B07EE /* ZZBigInt.mm */,
+			);
+			path = BigInt;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B1AEE8BD2744FC45001B07EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AEE8D12744FC45001B07EE /* ZZRSAEncryptor.h in Headers */,
+				B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */,
+				B1AEE8F8274500DC001B07EE /* ZZRSAKey.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B1AEE8C12744FC45001B07EE /* ZZRSAEncryptor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1AEE8D42744FC45001B07EE /* Build configuration list for PBXNativeTarget "ZZRSAEncryptor" */;
+			buildPhases = (
+				B1AEE8BD2744FC45001B07EE /* Headers */,
+				B1AEE8BE2744FC45001B07EE /* Sources */,
+				B1AEE8BF2744FC45001B07EE /* Frameworks */,
+				B1AEE8C02744FC45001B07EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZZRSAEncryptor;
+			productName = ZZRSAEncryptor;
+			productReference = B1AEE8C22744FC45001B07EE /* ZZRSAEncryptor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1AEE8C92744FC45001B07EE /* ZZRSAEncryptorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1AEE8D72744FC45001B07EE /* Build configuration list for PBXNativeTarget "ZZRSAEncryptorTests" */;
+			buildPhases = (
+				B1AEE8C62744FC45001B07EE /* Sources */,
+				B1AEE8C72744FC45001B07EE /* Frameworks */,
+				B1AEE8C82744FC45001B07EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1AEE8CD2744FC45001B07EE /* PBXTargetDependency */,
+			);
+			name = ZZRSAEncryptorTests;
+			productName = ZZRSAEncryptorTests;
+			productReference = B1AEE8CA2744FC45001B07EE /* ZZRSAEncryptorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1AEE8B92744FC45001B07EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					B1AEE8C12744FC45001B07EE = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					B1AEE8C92744FC45001B07EE = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					B1AEE8DA2744FCE1001B07EE = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = B1AEE8BC2744FC45001B07EE /* Build configuration list for PBXProject "ZZRSAEncryptor" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1AEE8B82744FC45001B07EE;
+			productRefGroup = B1AEE8C32744FC45001B07EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1AEE8C12744FC45001B07EE /* ZZRSAEncryptor */,
+				B1AEE8C92744FC45001B07EE /* ZZRSAEncryptorTests */,
+				B1AEE8DA2744FCE1001B07EE /* ZZRSAEncryptor_Package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1AEE8C02744FC45001B07EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AEE8C82744FC45001B07EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1AEE8DE2744FCE6001B07EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/sh\n\nFMK_NAME=${PROJECT_NAME}\n\nINSTALL_BASE_DIR=${PROJECT_DIR}/Package\nINSTALL_DIR=${INSTALL_BASE_DIR}/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# Step 1. Build Device and Simulator versions\n\nxcodebuild -target \"${FMK_NAME}\" clean\n\nxcodebuild -target \"${FMK_NAME}\" -configuration \"Release\" -arch \"arm64\" -arch \"armv7\" -arch \"armv7s\" only_active_arch=no defines_module=yes BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -sdk \"iphoneos\" build\nxcodebuild -target \"${FMK_NAME}\" -configuration \"Release\" -arch \"x86_64\" -arch \"i386\" only_active_arch=no defines_module=yes BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -sdk \"iphonesimulator\" build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -rf \"${WRK_DIR}\"\n\n# remove PrivateHeaders\nrm -rf \"${INSTALL_DIR}/PrivateHeaders\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1AEE8BE2744FC45001B07EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AEE8F42744FE43001B07EE /* ZZBigInt.mm in Sources */,
+				B1AEE8F02744FD9C001B07EE /* ZZRSAEncryptor.m in Sources */,
+				B1AEE8F9274500DC001B07EE /* ZZRSAKey.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AEE8C62744FC45001B07EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AEE8D02744FC45001B07EE /* ZZRSAEncryptorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1AEE8CD2744FC45001B07EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1AEE8C12744FC45001B07EE /* ZZRSAEncryptor */;
+			targetProxy = B1AEE8CC2744FC45001B07EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B1AEE8D22744FC45001B07EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1AEE8D32744FC45001B07EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1AEE8D52744FC45001B07EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				DYLIB_INSTALL_NAME_BASE = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quvideo.ZZRSAEncryptor;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1AEE8D62744FC45001B07EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				DYLIB_INSTALL_NAME_BASE = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quvideo.ZZRSAEncryptor;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1AEE8D82744FC45001B07EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q44Z5857F;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quvideo.ZZRSAEncryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1AEE8D92744FC45001B07EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Q44Z5857F;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quvideo.ZZRSAEncryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1AEE8DC2744FCE1001B07EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q44Z5857F;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B1AEE8DD2744FCE1001B07EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Q44Z5857F;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1AEE8BC2744FC45001B07EE /* Build configuration list for PBXProject "ZZRSAEncryptor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AEE8D22744FC45001B07EE /* Debug */,
+				B1AEE8D32744FC45001B07EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1AEE8D42744FC45001B07EE /* Build configuration list for PBXNativeTarget "ZZRSAEncryptor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AEE8D52744FC45001B07EE /* Debug */,
+				B1AEE8D62744FC45001B07EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1AEE8D72744FC45001B07EE /* Build configuration list for PBXNativeTarget "ZZRSAEncryptorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AEE8D82744FC45001B07EE /* Debug */,
+				B1AEE8D92744FC45001B07EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1AEE8DB2744FCE1001B07EE /* Build configuration list for PBXAggregateTarget "ZZRSAEncryptor_Package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AEE8DC2744FCE1001B07EE /* Debug */,
+				B1AEE8DD2744FCE1001B07EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1AEE8B92744FC45001B07EE /* Project object */;
+}
