@@ -6,6 +6,8 @@
 //
 
 #import "ZZRSAEncryptor.h"
+#import "ZZBigInt.h"
+#import <ZZASNOne/ZZASNOne.h>
 
 @interface ZZRSAEncryptor ()
 
@@ -54,12 +56,63 @@
                      privateKey:(NSString *)privateKey
                          module:(NSString *)module {
     if (self = [self init]) {
+        if (privateKey) {
+            self.key.keyType = ZZRSAKeyTypePrivate;
+        } else {
+            self.key.keyType = ZZRSAKeyTypePublic;
+        }
         self.key.bits = keySize;
         self.key.e = [[ZZBigInt alloc] initWithString:publicKey radix:16];
         self.key.d = [[ZZBigInt alloc] initWithString:privateKey radix:16];
         self.key.n = [[ZZBigInt alloc] initWithString:module radix:16];
     }
     
+    return self;
+}
+
++ (instancetype)encryptorWithPublicKeyFile:(NSString *)pubKeyFile
+                            privateKeyFile:(NSString *)privKeyFile {
+    ZZRSAEncryptor *encryptor = [[ZZRSAEncryptor alloc] initWithPublicKeyFile:pubKeyFile
+                                                               privateKeyFile:privKeyFile];
+    return encryptor;
+}
+
+- (instancetype)initWithPublicKeyFile:(NSString *)pubKeyFile
+                       privateKeyFile:(NSString *)privKeyFile {
+    if (self = [self init]) {
+        // 优先读取私钥文件,因为私钥文件中是可以获得公钥、私钥和模数的,而公钥文件只能获得公钥和模数
+        if ([privKeyFile isKindOfClass:[NSString class]] && privKeyFile.length > 0) {
+            self.key.keyType = ZZRSAKeyTypePrivate;
+            // 解析私钥文件
+            ZZASNOne *privASN = [ZZASNOne loadWithContentsOfFile:privKeyFile];
+            // 私钥文件数据存放在 asn->sequence->octet string->sequence->integers
+            NSArray<ZZASNInteger *> *integers = privASN.sequence.octetString.sequence.integers;
+            if (integers.count >= 4) { // [0,模数n,公钥e,私钥d,...] 至少包含这4个元素
+                NSString *module = integers[1].integerHexStr;
+                NSString *pubKey = integers[2].integerHexStr;
+                NSString *privKey = integers[3].integerHexStr;
+                self.key.bits = (int)(module.length * 4); // 16进制的每个字符=4个二进制位
+                self.key.n = [[ZZBigInt alloc] initWithString:module radix:16];
+                self.key.e = [[ZZBigInt alloc] initWithString:pubKey radix:16];
+                self.key.d = [[ZZBigInt alloc] initWithString:privKey radix:16];
+            }
+        } else if ([pubKeyFile isKindOfClass:[NSString class]] && pubKeyFile.length > 0) {
+            self.key.keyType = ZZRSAKeyTypePublic;
+            // 解析公钥
+            ZZASNOne *pubASN = [ZZASNOne loadWithContentsOfFile:pubKeyFile];
+            // 公钥文件数据存放在 asn->sequence->bit string->sequence->integers
+            NSArray<ZZASNInteger *> *integers = pubASN.sequence.bitString.sequence.integers;
+            if (integers.count >= 2) { // [模数n,公钥e,...] 至少包含这2个元素
+                NSString *module = integers[0].integerHexStr;
+                NSString *pubKey = integers[1].integerHexStr;
+                self.key.bits = (int)(module.length * 4); // 16进制的每个字符=4个二进制位
+                self.key.n = [[ZZBigInt alloc] initWithString:module radix:16];
+                self.key.e = [[ZZBigInt alloc] initWithString:pubKey radix:16];
+                // 如果只传入了公钥文件,则认为公钥既是e又是d,目的是为了让公钥可以进行加密解密
+                self.key.d = [[ZZBigInt alloc] initWithString:pubKey radix:16];
+            }
+        }
+    }
     return self;
 }
 
@@ -119,13 +172,14 @@
                           blockSize:blockSize
                           destBytes:&padding]) {
         ZZBigInt *message = [[ZZBigInt alloc] initWithUnsignedBytes:padding size:blockSize];
-        if ([message compare:self.key.n] == NSOrderedAscending) {
+        if ([message compare:self.key.n] == NSOrderedDescending) {
             free(padding);
             free(source);
             return NO;
         }
         // 加密， 计算(message ^ key) % module
-        ZZBigInt *encrypt = [message pow:self.key.d mod:self.key.n];
+        ZZBigInt *key = self.key.keyType == ZZRSAKeyTypePublic ? self.key.e : self.key.d;
+        ZZBigInt *encrypt = [message pow:key mod:self.key.n];
         [encrypt getBytes:(void **)destBytes length:outSize];
         
         free(padding);
@@ -213,7 +267,8 @@
                      outSize:(int *)outSize {
     ZZBigInt *cipherMessage = [[ZZBigInt alloc] initWithUnsignedBytes:bytes size:size];
     // 解密， 计算(cipher ^ key) % module
-    ZZBigInt *sourceMessage = [cipherMessage pow:self.key.e mod:self.key.n];
+    ZZBigInt *key = self.key.keyType == ZZRSAKeyTypePublic ? self.key.e : self.key.d;
+    ZZBigInt *sourceMessage = [cipherMessage pow:key mod:self.key.n];
     
     
     Byte *decodeBytes = NULL;
@@ -267,12 +322,14 @@
     //    self.key.e = [[ZZBigInt alloc] initWithInt:127];
     self.key.e = [[ZZBigInt alloc] initWithRandomPremeBits:self.key.bits / 2];
     ZZBigInt *t = [self.key.e gcdByBigInt:m];
-    while ([t compare:[ZZBigInt one]] > NSOrderedDescending) {
+    while ([t compare:[ZZBigInt one]] == NSOrderedDescending) {
         self.key.e = [self.key.e addByInt:2];
         t = [self.key.e gcdByBigInt:m];
     }
     
     self.key.d = [self.key.e modInverseByBigInt:m];
+    // 既有公钥又有私钥时优先使用私钥
+    self.key.keyType = ZZRSAKeyTypePrivate;
     
     return YES;
 }

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZZASNNodeProtocol.h"
+#import <ZZASNOne/ZZASNNodeProtocol.h>
 
 @interface ZZASNObjectIdentifier : NSObject<ZZASNNodeProtocol>
 

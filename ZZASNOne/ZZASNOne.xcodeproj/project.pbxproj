@@ -34,7 +34,7 @@
 		B1AEE8992744F96C001B07EE /* ZZASNSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE88A2744F96C001B07EE /* ZZASNSequence.m */; };
 		B1AEE89A2744F96C001B07EE /* ZZASNNull.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE88B2744F96C001B07EE /* ZZASNNull.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1AEE89B2744F96C001B07EE /* ZZASNUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE88C2744F96C001B07EE /* ZZASNUtils.h */; };
-		B1AEE89C2744F96C001B07EE /* ZZASNNodeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE88D2744F96C001B07EE /* ZZASNNodeProtocol.h */; };
+		B1AEE89C2744F96C001B07EE /* ZZASNNodeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE88D2744F96C001B07EE /* ZZASNNodeProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1AEE89D2744F96C001B07EE /* ZZASNUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE88E2744F96C001B07EE /* ZZASNUtils.m */; };
 		B1AEE89E2744F96C001B07EE /* ZZASNBitString.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE88F2744F96C001B07EE /* ZZASNBitString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1AEE89F2744F96C001B07EE /* ZZASNInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8902744F96C001B07EE /* ZZASNInteger.m */; };
@@ -152,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1AEE8712744F406001B07EE /* ZZASNOne.h in Headers */,
+				B1AEE89C2744F96C001B07EE /* ZZASNNodeProtocol.h in Headers */,
 				B1AEE8962744F96C001B07EE /* ZZASNSequence.h in Headers */,
 				B1AEE89B2744F96C001B07EE /* ZZASNUtils.h in Headers */,
 				B1AEE8952744F96C001B07EE /* ZZASNObjectIdentifier.h in Headers */,
@@ -159,7 +160,6 @@
 				B1AEE8982744F96C001B07EE /* ZZASNInteger.h in Headers */,
 				B1AEE8932744F96C001B07EE /* ZZASNOctetString.h in Headers */,
 				B1AEE89A2744F96C001B07EE /* ZZASNNull.h in Headers */,
-				B1AEE89C2744F96C001B07EE /* ZZASNNodeProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,9 +26,10 @@
 		B1AEE8D12744FC45001B07EE /* ZZRSAEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8C52744FC45001B07EE /* ZZRSAEncryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1AEE8F02744FD9C001B07EE /* ZZRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8EF2744FD9C001B07EE /* ZZRSAEncryptor.m */; };
 		B1AEE8F42744FE43001B07EE /* ZZBigInt.mm in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8F22744FE43001B07EE /* ZZBigInt.mm */; };
-		B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F32744FE43001B07EE /* ZZBigInt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F32744FE43001B07EE /* ZZBigInt.h */; };
 		B1AEE8F8274500DC001B07EE /* ZZRSAKey.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1AEE8F9274500DC001B07EE /* ZZRSAKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */; };
+		B1AEE93027451C05001B07EE /* ZZASNOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEE92F27451C05001B07EE /* ZZASNOne.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B1AEE8F32744FE43001B07EE /* ZZBigInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZBigInt.h; sourceTree = "<group>"; };
 		B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZRSAKey.h; sourceTree = "<group>"; };
 		B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZRSAKey.m; sourceTree = "<group>"; };
+		B1AEE92F27451C05001B07EE /* ZZASNOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZZASNOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AEE93027451C05001B07EE /* ZZASNOne.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 				B1AEE8C42744FC45001B07EE /* ZZRSAEncryptor */,
 				B1AEE8CE2744FC45001B07EE /* ZZRSAEncryptorTests */,
 				B1AEE8C32744FC45001B07EE /* Products */,
+				B1AEE92E27451C05001B07EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +101,8 @@
 				B1AEE8EF2744FD9C001B07EE /* ZZRSAEncryptor.m */,
 				B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */,
 				B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */,
-				B1AEE8F12744FE43001B07EE /* BigInt */,
+				B1AEE8F32744FE43001B07EE /* ZZBigInt.h */,
+				B1AEE8F22744FE43001B07EE /* ZZBigInt.mm */,
 			);
 			path = ZZRSAEncryptor;
 			sourceTree = "<group>";
@@ -110,13 +115,12 @@
 			path = ZZRSAEncryptorTests;
 			sourceTree = "<group>";
 		};
-		B1AEE8F12744FE43001B07EE /* BigInt */ = {
+		B1AEE92E27451C05001B07EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B1AEE8F32744FE43001B07EE /* ZZBigInt.h */,
-				B1AEE8F22744FE43001B07EE /* ZZBigInt.mm */,
+				B1AEE92F27451C05001B07EE /* ZZASNOne.framework */,
 			);
-			path = BigInt;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +131,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1AEE8D12744FC45001B07EE /* ZZRSAEncryptor.h in Headers */,
-				B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */,
 				B1AEE8F8274500DC001B07EE /* ZZRSAKey.h in Headers */,
+				B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@ FOUNDATION_EXPORT double ZZASNOneVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZZASNOneVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ZZASNOne/PublicHeader.h>
+#import <ZZASNOne/ZZASNNodeProtocol.h>
 #import <ZZASNOne/ZZASNSequence.h>
 #import <ZZASNOne/ZZASNObjectIdentifier.h>
 #import <ZZASNOne/ZZASNBitString.h>
