@@ -93,6 +93,10 @@
     NSString *pkcs8Header   = @"-----BEGIN PRIVATE KEY-----";
     // PEM pkcs8私钥文件尾
     NSString *pkcs8Footer   = @"-----END PRIVATE KEY-----\n";
+    // PEM ECC椭圆曲线加密算法的私钥文件头
+    NSString *ecPrivHeader = @"-----BEGIN EC PRIVATE KEY-----";
+    // PEM ECC椭圆曲线加密算法的私钥文件尾
+    NSString *ecPrivFooter = @"-----END EC PRIVATE KEY-----\n";
     
     if ([key hasPrefix:pubHeader] && [key hasSuffix:pubFooter]) {
         // PEM格式的公钥文件
@@ -106,6 +110,10 @@
         // PEM格式的pkcs8私钥文件
         key = [key stringByReplacingOccurrencesOfString:pkcs8Header withString:@""];
         key = [key stringByReplacingOccurrencesOfString:pkcs8Footer withString:@""];
+    } else if ([key hasPrefix:ecPrivHeader] && [key hasSuffix:ecPrivFooter]) {
+        // PEM ECC椭圆曲线加密算法的私钥文件
+        key = [key stringByReplacingOccurrencesOfString:ecPrivHeader withString:@""];
+        key = [key stringByReplacingOccurrencesOfString:ecPrivFooter withString:@""];
     } else {
         // TODO: 其他格式的PEM文件
         NSAssert(NO, @"请注意PEM的文件格式是否正常!");

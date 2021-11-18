@@ -16,18 +16,23 @@
 @synthesize parsedLength;
 
 + (instancetype)instanceWithData:(NSData *)data {
-    ZZASNBitString *bitString = [[ZZASNBitString alloc] initWithData:data];
+    ZZASNBitString *bitString = [[ZZASNBitString alloc] initWithData:data expand:YES];
     return bitString;
 }
 
-- (instancetype)initWithData:(NSData *)data {
++ (instancetype)bitStringWithData:(NSData *)data {
+    ZZASNBitString *bitString = [[ZZASNBitString alloc] initWithData:data expand:NO];
+    return bitString;
+}
+
+- (instancetype)initWithData:(NSData *)data expand:(BOOL)expand {
     if (self = [super init]) {
-        [self _parseBitStringData:data];
+        [self _parseBitStringData:data expand:expand];
     }
     return self;
 }
 
-- (void)_parseBitStringData:(NSData *)data {
+- (void)_parseBitStringData:(NSData *)data expand:(BOOL)expand {
     /*
      0x03 0x81 0x81 0x00 ...
      ------------------------------------------------
@@ -85,7 +90,13 @@
         contentData = [data subdataWithRange:NSMakeRange(contentOffset, self.contentLength)];
         NSAssert(NO, @"处理未使用位数非0的情况");
     }
-    [self _parseBitStringContentData:contentData];
+    // 记录自身内容
+    self.bitStringHexStr = [ZZASNUtils hexStringByData:contentData];
+    // 仅当需要展开解析时才解析其内容
+    if (expand) {
+        [self _parseBitStringContentData:contentData];
+    }
+    
 }
 
 - (void)_parseBitStringContentData:(NSData *)contentData {

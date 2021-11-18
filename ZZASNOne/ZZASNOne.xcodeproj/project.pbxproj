@@ -40,6 +40,8 @@
 		B1AEE89F2744F96C001B07EE /* ZZASNInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8902744F96C001B07EE /* ZZASNInteger.m */; };
 		B1AEE8A02744F96C001B07EE /* ZZASNBitString.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8912744F96C001B07EE /* ZZASNBitString.m */; };
 		B1AEE8A22744F9DA001B07EE /* ZZASNOne.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8A12744F9DA001B07EE /* ZZASNOne.m */; };
+		B1AEEC3627466B1B001B07EE /* ZZASNAxNode.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEEC3427466B1B001B07EE /* ZZASNAxNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AEEC3727466B1B001B07EE /* ZZASNAxNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEEC3527466B1B001B07EE /* ZZASNAxNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		B1AEE8902744F96C001B07EE /* ZZASNInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZASNInteger.m; sourceTree = "<group>"; };
 		B1AEE8912744F96C001B07EE /* ZZASNBitString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZASNBitString.m; sourceTree = "<group>"; };
 		B1AEE8A12744F9DA001B07EE /* ZZASNOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZASNOne.m; sourceTree = "<group>"; };
+		B1AEEC3427466B1B001B07EE /* ZZASNAxNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZASNAxNode.h; sourceTree = "<group>"; };
+		B1AEEC3527466B1B001B07EE /* ZZASNAxNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZASNAxNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				B1AEE8882744F96B001B07EE /* ZZASNOctetString.m */,
 				B1AEE8892744F96C001B07EE /* ZZASNInteger.h */,
 				B1AEE8902744F96C001B07EE /* ZZASNInteger.m */,
+				B1AEEC3427466B1B001B07EE /* ZZASNAxNode.h */,
+				B1AEEC3527466B1B001B07EE /* ZZASNAxNode.m */,
 				B1AEE88B2744F96C001B07EE /* ZZASNNull.h */,
 				B1AEE8852744F96B001B07EE /* ZZASNNull.m */,
 				B1AEE88C2744F96C001B07EE /* ZZASNUtils.h */,
@@ -158,6 +164,7 @@
 				B1AEE8952744F96C001B07EE /* ZZASNObjectIdentifier.h in Headers */,
 				B1AEE89E2744F96C001B07EE /* ZZASNBitString.h in Headers */,
 				B1AEE8982744F96C001B07EE /* ZZASNInteger.h in Headers */,
+				B1AEEC3627466B1B001B07EE /* ZZASNAxNode.h in Headers */,
 				B1AEE8932744F96C001B07EE /* ZZASNOctetString.h in Headers */,
 				B1AEE89A2744F96C001B07EE /* ZZASNNull.h in Headers */,
 			);
@@ -286,6 +293,7 @@
 			files = (
 				B1AEE89F2744F96C001B07EE /* ZZASNInteger.m in Sources */,
 				B1AEE89D2744F96C001B07EE /* ZZASNUtils.m in Sources */,
+				B1AEEC3727466B1B001B07EE /* ZZASNAxNode.m in Sources */,
 				B1AEE8992744F96C001B07EE /* ZZASNSequence.m in Sources */,
 				B1AEE8942744F96C001B07EE /* ZZASNNull.m in Sources */,
 				B1AEE8972744F96C001B07EE /* ZZASNOctetString.m in Sources */,

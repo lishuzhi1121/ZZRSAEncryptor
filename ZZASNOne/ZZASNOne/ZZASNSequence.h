@@ -8,7 +8,12 @@
 #import <Foundation/Foundation.h>
 #import <ZZASNOne/ZZASNNodeProtocol.h>
 
-@class ZZASNObjectIdentifier,ZZASNNull,ZZASNBitString, ZZASNInteger,ZZASNOctetString;
+@class  ZZASNObjectIdentifier,
+        ZZASNBitString,
+        ZZASNOctetString,
+        ZZASNInteger,
+        ZZASNNull,
+        ZZASNAxNode;
 
 @interface ZZASNSequence : NSObject<ZZASNNodeProtocol>
 
@@ -24,6 +29,8 @@
 @property (nonatomic, strong) ZZASNOctetString *octetString;
 /// 一个 SEQUENCE 中可能包含多个 INTEGER
 @property (nonatomic, strong) NSMutableArray<ZZASNInteger *> *integers;
+/// 一个 SEQUENCE 中可能包含多个 AxNode（这是一种特殊类型）
+@property (nonatomic, strong) NSMutableArray<ZZASNAxNode *> *axNodes;
 
 @end
 

@@ -12,6 +12,7 @@
 #import "ZZASNBitString.h"
 #import "ZZASNInteger.h"
 #import "ZZASNOctetString.h"
+#import "ZZASNAxNode.h"
 
 @implementation ZZASNSequence
 
@@ -139,6 +140,15 @@
             currentNode = self.sequence;
             break;
         }
+        case 0xA0:
+        case 0xA1:
+        {
+            // AxNode
+            ZZASNAxNode * ax = [ZZASNAxNode instanceWithData:contentData];
+            [self.axNodes addObject:ax];
+            currentNode = ax;
+            break;
+        }
             
         default:
             break;
@@ -163,6 +173,13 @@
         _integers = [NSMutableArray array];
     }
     return _integers;
+}
+
+- (NSMutableArray<ZZASNAxNode *> *)axNodes {
+    if (!_axNodes) {
+        _axNodes = [NSMutableArray array];
+    }
+    return _axNodes;
 }
 
 @end
