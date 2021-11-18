@@ -73,6 +73,8 @@
     // 开始解析内容部分
     self.parsedLength = 0;
     NSData *contentData = [data subdataWithRange:NSMakeRange(contentOffset, self.contentLength)];
+    // 记录自身内容
+    self.octetStringHexStr = [ZZASNUtils hexStringByData:contentData];
     [self _parseOctetStringContentData:contentData];
     
 }

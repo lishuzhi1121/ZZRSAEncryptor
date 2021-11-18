@@ -27,6 +27,7 @@
 		B1AEE9482745204C001B07EE /* rsa_1024_private_test.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE93E2745204C001B07EE /* rsa_1024_private_test.pem */; };
 		B1AEEC2627463F24001B07EE /* ZZRSAEncryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEEC2527463F24001B07EE /* ZZRSAEncryptor.framework */; };
 		B1AEEC33274669F6001B07EE /* private_key_prime256v1.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEEC32274669F6001B07EE /* private_key_prime256v1.pem */; };
+		B1AEEC3927467996001B07EE /* public_key_prime256v1.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEEC3827467996001B07EE /* public_key_prime256v1.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		B1AEE93E2745204C001B07EE /* rsa_1024_private_test.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_1024_private_test.pem; sourceTree = "<group>"; };
 		B1AEEC2527463F24001B07EE /* ZZRSAEncryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZZRSAEncryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1AEEC32274669F6001B07EE /* private_key_prime256v1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key_prime256v1.pem; sourceTree = "<group>"; };
+		B1AEEC3827467996001B07EE /* public_key_prime256v1.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_key_prime256v1.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B1AEE9352745204C001B07EE /* p12 */,
+				B1AEEC3827467996001B07EE /* public_key_prime256v1.pem */,
 				B1AEEC32274669F6001B07EE /* private_key_prime256v1.pem */,
 				B1AEE93B2745204C001B07EE /* rsa_1024_public_key.pem */,
 				B1AEE93E2745204C001B07EE /* rsa_1024_private_test.pem */,
@@ -212,6 +215,7 @@
 				B1AEE9432745204C001B07EE /* rsa_2048_cert.csr in Resources */,
 				B1AEE9482745204C001B07EE /* rsa_1024_private_test.pem in Resources */,
 				B1AEEC33274669F6001B07EE /* private_key_prime256v1.pem in Resources */,
+				B1AEEC3927467996001B07EE /* public_key_prime256v1.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

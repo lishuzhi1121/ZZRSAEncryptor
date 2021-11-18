@@ -15,5 +15,8 @@
 /// 一个 OCTET STRING 中暂定只允许包含一个 SEQUENCE
 @property (nonatomic, strong) ZZASNSequence *sequence;
 
+/// OCTET STRING 自身内容的16进制字符串
+@property (nonatomic, copy) NSString *octetStringHexStr;
+
 @end
 

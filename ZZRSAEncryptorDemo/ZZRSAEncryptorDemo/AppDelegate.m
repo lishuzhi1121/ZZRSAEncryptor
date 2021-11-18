@@ -19,10 +19,18 @@
     // Override point for customization after application launch.
     
     // MARK: - ASN.1 parse test
-    
-    NSString *keyFilePath = [[NSBundle mainBundle] pathForResource:@"private_key_prime256v1" ofType:@"pem"];
-    ZZASNOne *asn1 = [ZZASNOne loadWithContentsOfFile:keyFilePath];
+    // ECC 公钥文件
+    NSString *pubFilePath = [[NSBundle mainBundle] pathForResource:@"public_key_prime256v1" ofType:@"pem"];
+    ZZASNOne *asn1 = [ZZASNOne loadWithContentsOfFile:pubFilePath];
+    // 公钥字符串：asn1->_sequence->_bitString->_bitStringHexStr
     NSLog(@"asn1: %@", asn1);
+    
+    // ECC 私钥文件
+    NSString *privFilePath = [[NSBundle mainBundle] pathForResource:@"private_key_prime256v1" ofType:@"pem"];
+    ZZASNOne *asn2 = [ZZASNOne loadWithContentsOfFile:privFilePath];
+    // 私钥字符串：asn2->_sequence->_octetString->_octetStringHexStr
+    // 公钥字符串：asn2->_sequence->_axNodes->[1]->_bitString->_bitStringHexStr
+    NSLog(@"asn1: %@", asn2);
     
     
     return YES;
