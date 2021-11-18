@@ -79,7 +79,7 @@
 2. 添加 `ZZRSAEncryptor.framework` 的系统依赖库 `libc++.tbd`
 
 完成后如下图：
-![install](http://sandslee.tpddns.cn:9000/markdown/2021-11-18-lc5J3t-tE7YHB.png)
+![install](https://github.com/lishuzhi1121/ZZRSAEncryptor/raw/main/images/2021-11-18-lc5J3t-tE7YHB.png)
 
 
 ## 四、使用方式
