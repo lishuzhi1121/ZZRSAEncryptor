@@ -21,6 +21,7 @@ FOUNDATION_EXPORT const unsigned char ZZASNOneVersionString[];
 #import <ZZASNOne/ZZASNOctetString.h>
 #import <ZZASNOne/ZZASNInteger.h>
 #import <ZZASNOne/ZZASNNull.h>
+#import <ZZASNOne/ZZASNAxNode.h>
 
 /// ASN.1 语法文件对象
 /// https://docs.microsoft.com/en-us/windows/win32/seccertenroll/about-asn-1-type-system

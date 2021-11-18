@@ -7,7 +7,4 @@
    <FileRef
       location = "group:ZZRSAEncryptorDemo/../ZZRSAEncryptor/ZZRSAEncryptor.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:ZZASNOne/ZZASNOne.xcodeproj">
-   </FileRef>
 </Workspace>
