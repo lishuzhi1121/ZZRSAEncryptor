@@ -9,6 +9,9 @@
 #import "ZZBigInt.h"
 #import <ZZASNOne/ZZASNOne.h>
 
+// 生成类型, 仅内部生成密钥时使用
+static ZZRSAKeyType ZZRSAKeyTypeGenerated = ZZRSAKeyTypePrivate + 1;
+
 @interface ZZRSAEncryptor ()
 
 /// 密钥信息
@@ -179,6 +182,9 @@
         }
         // 加密， 计算(message ^ key) % module
         ZZBigInt *key = self.key.keyType == ZZRSAKeyTypePublic ? self.key.e : self.key.d;
+        if (self.key.keyType == ZZRSAKeyTypeGenerated) {
+            key = self.key.d; // 生成密钥的方式采用d加密，e解密
+        }
         ZZBigInt *encrypt = [message pow:key mod:self.key.n];
         [encrypt getBytes:(void **)destBytes length:outSize];
         
@@ -268,6 +274,9 @@
     ZZBigInt *cipherMessage = [[ZZBigInt alloc] initWithUnsignedBytes:bytes size:size];
     // 解密， 计算(cipher ^ key) % module
     ZZBigInt *key = self.key.keyType == ZZRSAKeyTypePublic ? self.key.e : self.key.d;
+    if (self.key.keyType == ZZRSAKeyTypeGenerated) {
+        key = self.key.e; // 生成密钥的方式采用d加密，e解密
+    }
     ZZBigInt *sourceMessage = [cipherMessage pow:key mod:self.key.n];
     
     
@@ -328,8 +337,8 @@
     }
     
     self.key.d = [self.key.e modInverseByBigInt:m];
-    // 既有公钥又有私钥时优先使用私钥
-    self.key.keyType = ZZRSAKeyTypePrivate;
+    // 如果是生成的密钥，默认私钥加密，公钥解密
+    self.key.keyType = ZZRSAKeyTypeGenerated;
     
     return YES;
 }

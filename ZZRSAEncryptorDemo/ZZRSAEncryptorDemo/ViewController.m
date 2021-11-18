@@ -17,6 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *plainText = @"Sands@1992.11.21哈哈哈";
+    
+    // MARK: - 内部生成密钥方式加密解密
+    ZZRSAEncryptor *encryptor = [ZZRSAEncryptor encryptorWithKeySize:1024];
+    // 加密
+    NSData *enData = [encryptor encryptWithData:[plainText dataUsingEncoding:NSUTF8StringEncoding]];
+    if (enData.length > 0) {
+        // 解密
+        NSData *deData = [encryptor decryptWithData:enData];
+        NSString *deStr = [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
+        NSLog(@"解密后: %@", deStr);
+    }
     
     // MARK: - 密钥字符串方式加密解密
 //    NSString *pubKey = @"010001";
@@ -26,7 +38,6 @@
 //                                                           publicKey:pubKey
 //                                                          privateKey:priKey
 //                                                              module:module];
-    NSString *plainText = @"Sands@1992.11.21哈哈哈";
 //    // 加密
 //    NSData *enData = [encryptor encryptWithData:[plainText dataUsingEncoding:NSUTF8StringEncoding]];
 //    if (enData.length > 0) {
@@ -40,19 +51,19 @@
     // MARK: - 密钥文件方式加密解密
     // MARK: - 公钥加密私钥解密
     // 公钥加密
-    NSString *pubFilePath = [[NSBundle mainBundle] pathForResource:@"rsa_1024_public_key" ofType:@"pem"];
-    ZZRSAEncryptor *pubEncryptor = [ZZRSAEncryptor encryptorWithPublicKeyFile:pubFilePath
-                                                               privateKeyFile:nil];
-    NSData *enData = [pubEncryptor encryptWithData:[plainText dataUsingEncoding:NSUTF8StringEncoding]];
-    if (enData.length > 0) {
-        // 私钥解密
-        NSString *privFilePath = [[NSBundle mainBundle] pathForResource:@"rsa_1024_private_key_pkcs8" ofType:@"pem"];
-        ZZRSAEncryptor *privEncryptor = [ZZRSAEncryptor encryptorWithPublicKeyFile:nil
-                                                                    privateKeyFile:privFilePath];
-        NSData *deData = [privEncryptor decryptWithData:enData];
-        NSString *deStr = [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
-        NSLog(@"私钥解密后: %@", deStr);
-    }
+//    NSString *pubFilePath = [[NSBundle mainBundle] pathForResource:@"rsa_1024_public_key" ofType:@"pem"];
+//    ZZRSAEncryptor *pubEncryptor = [ZZRSAEncryptor encryptorWithPublicKeyFile:pubFilePath
+//                                                               privateKeyFile:nil];
+//    NSData *enData = [pubEncryptor encryptWithData:[plainText dataUsingEncoding:NSUTF8StringEncoding]];
+//    if (enData.length > 0) {
+//        // 私钥解密
+//        NSString *privFilePath = [[NSBundle mainBundle] pathForResource:@"rsa_1024_private_key_pkcs8" ofType:@"pem"];
+//        ZZRSAEncryptor *privEncryptor = [ZZRSAEncryptor encryptorWithPublicKeyFile:nil
+//                                                                    privateKeyFile:privFilePath];
+//        NSData *deData = [privEncryptor decryptWithData:enData];
+//        NSString *deStr = [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
+//        NSLog(@"私钥解密后: %@", deStr);
+//    }
     
     // MARK: - 私钥加密公钥解密
 //    // 私钥加密
