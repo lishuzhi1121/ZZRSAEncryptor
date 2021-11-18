@@ -29,7 +29,7 @@
 		B1AEE8F52744FE43001B07EE /* ZZBigInt.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F32744FE43001B07EE /* ZZBigInt.h */; };
 		B1AEE8F8274500DC001B07EE /* ZZRSAKey.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1AEE8F9274500DC001B07EE /* ZZRSAKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */; };
-		B1AEE93027451C05001B07EE /* ZZASNOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEE92F27451C05001B07EE /* ZZASNOne.framework */; };
+		B1AEEC1D27463C80001B07EE /* ZZASNOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEEC1C27463C7F001B07EE /* ZZASNOne.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		B1AEE8F32744FE43001B07EE /* ZZBigInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZBigInt.h; sourceTree = "<group>"; };
 		B1AEE8F6274500DC001B07EE /* ZZRSAKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZRSAKey.h; sourceTree = "<group>"; };
 		B1AEE8F7274500DC001B07EE /* ZZRSAKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZRSAKey.m; sourceTree = "<group>"; };
-		B1AEE92F27451C05001B07EE /* ZZASNOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZZASNOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AEEC1C27463C7F001B07EE /* ZZASNOne.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZZASNOne.framework; path = ../ZZASNOne/Package/ZZASNOne.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1AEE93027451C05001B07EE /* ZZASNOne.framework in Frameworks */,
+				B1AEEC1D27463C80001B07EE /* ZZASNOne.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +118,7 @@
 		B1AEE92E27451C05001B07EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B1AEE92F27451C05001B07EE /* ZZASNOne.framework */,
+				B1AEEC1C27463C7F001B07EE /* ZZASNOne.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -410,6 +410,7 @@
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				DYLIB_INSTALL_NAME_BASE = "";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../ZZASNOne/Package";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -437,6 +438,7 @@
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				DYLIB_INSTALL_NAME_BASE = "";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../ZZASNOne/Package";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

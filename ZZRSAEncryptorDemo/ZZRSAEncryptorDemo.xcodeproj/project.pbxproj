@@ -14,7 +14,6 @@
 		B1AEE91327451AF1001B07EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE91227451AF1001B07EE /* Assets.xcassets */; };
 		B1AEE91627451AF1001B07EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE91427451AF1001B07EE /* LaunchScreen.storyboard */; };
 		B1AEE91927451AF1001B07EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AEE91827451AF1001B07EE /* main.m */; };
-		B1AEE92B27451BF6001B07EE /* ZZRSAEncryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEE92A27451BF6001B07EE /* ZZRSAEncryptor.framework */; };
 		B1AEE93227451C23001B07EE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEE93127451C23001B07EE /* libc++.tbd */; };
 		B1AEE93F2745204C001B07EE /* rsa_2048_private_key_pkcs8.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE9342745204C001B07EE /* rsa_2048_private_key_pkcs8.pem */; };
 		B1AEE9402745204C001B07EE /* rsa_2048_public.der in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE9362745204C001B07EE /* rsa_2048_public.der */; };
@@ -26,6 +25,7 @@
 		B1AEE9462745204C001B07EE /* rsa_1024_private_key_pkcs8.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE93C2745204C001B07EE /* rsa_1024_private_key_pkcs8.pem */; };
 		B1AEE9472745204C001B07EE /* rsa_2048_public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE93D2745204C001B07EE /* rsa_2048_public_key.pem */; };
 		B1AEE9482745204C001B07EE /* rsa_1024_private_test.pem in Resources */ = {isa = PBXBuildFile; fileRef = B1AEE93E2745204C001B07EE /* rsa_1024_private_test.pem */; };
+		B1AEEC2627463F24001B07EE /* ZZRSAEncryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AEEC2527463F24001B07EE /* ZZRSAEncryptor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,6 @@
 		B1AEE91527451AF1001B07EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1AEE91727451AF1001B07EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1AEE91827451AF1001B07EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B1AEE92A27451BF6001B07EE /* ZZRSAEncryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZZRSAEncryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1AEE92C27451BF9001B07EE /* ZZASNOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZZASNOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1AEE93127451C23001B07EE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B1AEE9342745204C001B07EE /* rsa_2048_private_key_pkcs8.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_2048_private_key_pkcs8.pem; sourceTree = "<group>"; };
 		B1AEE9362745204C001B07EE /* rsa_2048_public.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa_2048_public.der; sourceTree = "<group>"; };
@@ -54,6 +52,7 @@
 		B1AEE93C2745204C001B07EE /* rsa_1024_private_key_pkcs8.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_1024_private_key_pkcs8.pem; sourceTree = "<group>"; };
 		B1AEE93D2745204C001B07EE /* rsa_2048_public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_2048_public_key.pem; sourceTree = "<group>"; };
 		B1AEE93E2745204C001B07EE /* rsa_1024_private_test.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_1024_private_test.pem; sourceTree = "<group>"; };
+		B1AEEC2527463F24001B07EE /* ZZRSAEncryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZZRSAEncryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AEEC2627463F24001B07EE /* ZZRSAEncryptor.framework in Frameworks */,
 				B1AEE93227451C23001B07EE /* libc++.tbd in Frameworks */,
-				B1AEE92B27451BF6001B07EE /* ZZRSAEncryptor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +107,8 @@
 		B1AEE92927451BF6001B07EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1AEEC2527463F24001B07EE /* ZZRSAEncryptor.framework */,
 				B1AEE93127451C23001B07EE /* libc++.tbd */,
-				B1AEE92C27451BF9001B07EE /* ZZASNOne.framework */,
-				B1AEE92A27451BF6001B07EE /* ZZRSAEncryptor.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -369,6 +367,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3Q44Z5857F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../ZZASNOne/Package",
+					"$(SRCROOT)/../ZZRSAEncryptor/Package",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZZRSAEncryptorDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -397,6 +399,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3Q44Z5857F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../ZZASNOne/Package",
+					"$(SRCROOT)/../ZZRSAEncryptor/Package",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZZRSAEncryptorDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

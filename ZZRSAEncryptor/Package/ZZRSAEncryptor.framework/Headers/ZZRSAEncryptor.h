@@ -25,6 +25,7 @@ FOUNDATION_EXPORT const unsigned char ZZRSAEncryptorVersionString[];
 @property (nonatomic, strong, readonly) ZZRSAKey *key;
 
 /// 初始化RSA加密器, 密钥由内部随机生成
+/// Warning: 不建议使用！当密钥长度超过1024位时，密钥生成比较耗时！
 /// @param keySize 密钥长度
 + (instancetype)encryptorWithKeySize:(int)keySize;
 
