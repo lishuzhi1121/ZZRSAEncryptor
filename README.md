@@ -2,9 +2,7 @@
 
 基于RSA公钥算法的加密解密工具库iOS OC语言实现，不依赖iOS系统Keychain和Security.framework。
 
-
 ## 一、理论基础
-
 
 ### 1. RSA算法原理
 
@@ -16,7 +14,6 @@
 
 - 私钥（d）：用于解密过程中的指数运算（同理，d只是私钥的一部分，暂且称之为私钥）
 
-  
 
 ### 2. 密钥文件类型
 
@@ -56,26 +53,17 @@
     注意，这里就没有 RSA 字样了，因为 PKCS#8 是一个通用型的密钥格式方案。
 
 
-
-### 3. ASN.1 编码格式
-
-关于ASN.1的编码格式，[微软官方文档](https://docs.microsoft.com/en-us/windows/win32/seccertenroll/about-der-encoding-of-asn-1-types)有非常详细的描述，为了从密钥文件中解析出对应的n、e、d，本库实现了 **ZZASNOne** 部分（目前只实现了openssl生成的密钥文件中使用到的类型节点），用于解析ASN.1编码格式。
-
-
-
 ## 二、项目结构
 
 本项目有三个部分：
 
-1. ZZASNOne：主要用于解析密钥文件内容；
-2. ZZASNEncryptor：实现RSA算法的核心库，依赖于ZZASNOne；
-3. ZZASNEncryptorDemo：示例程序，主要用于演示ZZASNEncryptor如何使用；
-
+1. ZZRSAEncryptor：实现RSA算法的核心库，依赖于 [ZZASNOne](https://github.com/lishuzhi1121/ZZASNOne) 做密钥文件解析；
+2. ZZRSAEncryptorDemo：示例程序，主要用于演示ZZRSAEcryptor如何使用；
 
 
 ## 三、接入方式
 
-1. 将 `ZZASNEncryptor/Package` 目录下的 `ZZASNEncryptor.framework` 拖到你的项目中并选择copy
+1. 将 `ZZRSAEncryptor/Package` 目录下的 `ZZRSAEncryptor.framework` 拖到你的项目中并选择Copy
 2. 添加 `ZZRSAEncryptor.framework` 的系统依赖库 `libc++.tbd`
 
 完成后如下图：
@@ -83,8 +71,6 @@
 
 
 ## 四、使用方式
-
-
 
 ### 1. 密钥生成
 
@@ -117,7 +103,6 @@ RSA公钥加密算法使用的密钥生成方式有两种，一种是直接使�
 }
 
 ~~~
-
 
 
 #### 1.2 使用 openssl 生成密钥
